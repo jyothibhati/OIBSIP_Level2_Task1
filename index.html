@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="title">Advanced Calculator</h2>
+        <div class="calculator">
+            <input type="text" id="result" readonly>
+            <div class="row">
+                <input type="button" class="key clear" value="C" onclick="clearInput()">
+                <input type="button" class="key operator" value="/" onclick="appendValue('/')">
+                <input type="button" class="key operator" value="*" onclick="appendValue('*')">
+                <input type="button" class="key operator" value="%" onclick="appendValue('%')">
+            </div>
+            <div class="row">
+                <input type="button" class="key" value="7" onclick="appendValue('7')">
+                <input type="button" class="key" value="8" onclick="appendValue('8')">
+                <input type="button" class="key" value="9" onclick="appendValue('9')">
+                <input type="button" class="key operator" value="-" onclick="appendValue('-')">
+            </div>
+            <div class="row">
+                <input type="button" class="key" value="4" onclick="appendValue('4')">
+                <input type="button" class="key" value="5" onclick="appendValue('5')">
+                <input type="button" class="key" value="6" onclick="appendValue('6')">
+                <input type="button" class="key operator" value="+" onclick="appendValue('+')">
+            </div>
+            <div class="row">
+                <input type="button" class="key" value="1" onclick="appendValue('1')">
+                <input type="button" class="key" value="2" onclick="appendValue('2')">
+                <input type="button" class="key" value="3" onclick="appendValue('3')">
+                <input type="button" class="key equal" value="=" onclick="calculate()">
+            </div>
+            <div class="row">
+                <input type="button" class="key" value="0" onclick="appendValue('0')">
+                <input type="button" class="key" value="." onclick="appendValue('.')">
+                <input type="button" class="key square-root" value="⌫" onclick="backspace()">
+                <input type="button" class="key operator" value="(" onclick="appendValue('(')">
+            </div>
+            <div class="row">
+                <input type="button" class="key" value=")" onclick="appendValue(')')">
+                <input type="button" class="key operator" value="√" onclick="calculateSqrt()">
+                <input type="button" class="key operator" value="^" onclick="appendValue('**')">
+                <input type="button" class="key operator" value="!" onclick="calculateFactorial()">
+            </div>
+            <div class="row">
+                <input type="button" class="key clear" value="AC" onclick="clearInput()">
+                <input type="button" class="key dark-mode" value="Dark Mode" onclick="toggleDarkMode()">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
